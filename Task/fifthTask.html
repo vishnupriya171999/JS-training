@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days in a Month</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #heading{
+
+text-align: center;
+font-size: 35px;
+margin-left: -55px;
+
+}
+body{
+            background-color: rgb(250, 201, 239);
+        }
+        #back{
+            text-decoration: none;
+            position: relative;
+            top: -35px;
+            left: 250px;
+            background-color: rgba(254, 12, 153, 0.753);
+            padding: 10px;
+            /* font-size: 16px; */
+            border:3px solid black;
+            border-radius: 20px;
+            color: whitesmoke;
+            
+       }
+       #back:hover{
+            color:black ;
+       }
+       
+       .row{
+        font-size: 20px;
+
+       }
+       .row input{
+        border: none;
+        outline: none;
+        font-size: 20px;
+        width: 150px;
+        border-radius: 5px;
+        padding: 3px;
+        text-align: left;
+       }
+       .row select{
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 3px;
+
+       }
+    </style>
+    <h2 id="heading"><i><u>Days in a Month</u></i></h2><a id="back" href="taskHomePage.html">Back to Home</a><br>
+    
+    <div class="row">Month : <select id="selectMonth" onclick="select()">
+        <option>*** Select Month ***</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+       </select> 
+       Days in a month : <input type="text" id="Days"><br><br><br>
+    </div>
+       
+       <script>
+        function select(){
+            let selectMonth = document.getElementById('selectMonth').value;
+                    let Days = "";
+                    if(selectMonth == "January"){
+                        Days = 31 + " Days";
+                    }else if(selectMonth == "February"){
+                        Days = 28 + " Days";
+                    }else if(selectMonth == "March"){
+                        Days = 31 + " Days";
+                    }else if(selectMonth == "April"){
+                        Days = 30 + " Days";
+                    }else if(selectMonth == "May"){
+                        Days = 31 + " Days";
+                    }else if(selectMonth == "June"){
+                        Days = 30 + " Days";
+                    }else if(selectMonth == "July"){
+                        
+                        Days = 31 + " Days";
+                    }else if(selectMonth == "August"){
+                        Days = 31 + " Days";
+                    }else if(selectMonth == "September"){
+                        Days = 30 + " Days";
+                    }else if(selectMonth == "October"){
+                        Days = 31 + " Days";
+                    }else if(selectMonth == "November"){
+                        Days = 30 + " Days";
+                    }else if(selectMonth == "December"){
+                        Days = 31 + " Days";
+                    }
+
+                    document.getElementById('Days').value = Days;
+        }
+       </script>
+  
+</body>
+</html>

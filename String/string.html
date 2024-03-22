@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>String</h2>
+    <p id="output"></p>
+    <script>
+        function startwith(str, fele) {
+            let newstring="";
+            let result="";
+            for(let i=0;i<fele.length;i++){
+                newstring+=str[i];  
+            }
+            if(newstring==fele)
+                console.log("True");
+                else{
+                    console.log("False");
+                }
+        }
+        startwith("Priya", "Pri");
+
+    function endwith(str, endelment) {
+            let newstr = "";
+            let result = "";
+            let strlen=str.length;                               
+            let endlen = endelment.length;
+            for(let idx=strlen-1;idx>=0;idx--){
+                newstr = str[idx] + newstr;
+                let newlen=newstr.length;
+                if(newlen==endlen){
+                    break;
+                } 
+            }
+            if (newstr == endelment) {
+                result = "True";
+            }
+            else {
+                result = "False";
+            }
+            // console.log(newstr);
+            console.log(result);
+        }
+        endwith("Hello", "llo");
+
+
+
+
+
+
+
+    function substring(str,start,end){
+        let newstr="";
+            for(let j=start;j<end;j++){
+                newstr+=str[j];
+               
+            }
+            console.log(newstr);
+        
+    }
+    substring("Welcome to Our Home",0,5);
+
+    // function replace(text,ele1,ele2){
+    //     let result="";
+    //     for(let i=0;i<text.length;i++){
+    //         if(text[i]==ele)
+    //         {
+    //             text[i]+=ele2
+    //             console.log(text);
+    //         }
+    //         else
+    //         {
+    //            result+=text[i];
+    //         }
+    //     }
+    //     console.log(result);
+    // }
+    // replace("Vaias","a","o");
+
+    function charAt(str,char){
+        let res="";
+        for(let i=0;i<str.length;i++){
+            if(i==char){
+                console.log(str[i])
+            }
+        }
+    }
+    charAt("Priya",3 )
+
+    function split(str,ele){
+        let res="";
+        for(let i=0;i<str.length;i++){
+            if(str[i]==ele){
+                res+=",";
+            }
+            else
+            {
+                res+=str[i];
+            }
+            
+        }
+        console.log(res);
+
+    }
+    split("Vishnu priya barath kumar" , " ")
+
+    function trim(string){
+        let result="";
+        let startidx = 0;
+        let endindx = string.length-1;
+        while(startidx<=string.length && string[startidx]== " "){
+            startidx++;
+        }
+        while(endindx>=0 && string[endindx] == " ")
+        {
+            endindx--;
+        }
+        for(let i=startidx;i<=endindx;i++){
+            result+=string[i];
+        }
+        console.log(result);
+    }
+    trim("   Iam Priya    ");
+
+    function replace(str,str1,str2)
+    {
+        let str1st="";
+        let str2nd="";
+        let endidx=0;
+       for(let i=0;i<str.length-1;i++){
+        if(str[i]==str1[0])
+        {
+            let endidx=i+(str1.length-1);
+            break;
+        }
+        str1st+=str[i];
+    }
+        for(let i=0;i<str.length-1;i++){
+            if(i>endidx){
+   
+            }
+            str2nd+=str[i];
+       }
+       console.log(str1st+str2+str2nd)
+    }
+
+    replace("voiosohonouoporoioyoao","o","*")
+
+    </script>
+      
+
+
+</body>
+</html>

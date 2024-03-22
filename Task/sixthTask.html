@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Given year is Leap year or not</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #heading{
+
+text-align: center;
+font-size: 35px;
+margin-left: -55px;
+
+}
+body{
+            background-color: rgb(250, 201, 239);
+        }
+        #back{
+            text-decoration: none;
+            position: relative;
+            top: -35px;
+            left: 250px;
+            background-color: rgba(254, 12, 153, 0.753);
+            padding: 10px;
+            /* font-size: 16px; */
+            border:3px solid black;
+            border-radius: 20px;
+            color: whitesmoke;
+            
+       }
+       #back:hover{
+            color:black ;
+       }
+       
+       .row{
+        font-size: 20px;
+
+       }
+       .row input{
+        border: none;
+        outline: none;
+        font-size: 20px;
+        /* width: 200px; */
+        border-radius: 5px;
+        padding: 3px;
+        text-align: left;
+       }
+       .row select{
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 3px;
+
+       }
+    </style>
+    <h2 id="heading"><i><u>Given year is Leap year or not</u></i></h2><a id="back" href="taskHomePage.html">Back to Home</a><br>
+    <div class="row">
+    Given Year : <input type="text" name="year" id="year"><br><br>
+    <input type="button" value="Find Answer" onclick="result()">
+    <input type="text" id="output"><br><br><br>
+    
+</div>
+<script>78
+    function result()
+            {
+            let leapYear = document.getElementById('year').value;
+            let output = "";
+            if(leapYear %4 ==0 ){
+                output = leapYear +  " is a Leap Year"; 
+            }
+            else{
+                output = leapYear +  " is not a Leap Year"; 
+            }
+
+            document.getElementById('output').value = output;
+            }
+            
+</script>
+
+
+    
+</body>
+</html>

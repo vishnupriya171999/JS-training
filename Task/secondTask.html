@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Grade Calculator</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 10px;
+        }
+        body{
+            background-color: rgb(250, 201, 239);
+        }
+        #heading{
+
+text-align: center;
+font-size: 35px;
+
+}
+        #back{
+            text-decoration: none;
+            position: relative;
+            top: -30px;
+            left: 500px;
+            background-color: rgba(254, 12, 153, 0.753);
+            padding: 10px;
+            /* font-size: 16px; */
+            border:3px solid black;
+            border-radius: 20px;
+            color: whitesmoke;
+            
+       }
+       #back:hover{
+            color:black ;
+       }
+       table{
+    /* width: 300px; */
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+th{
+    /* text-transform: uppercase; */
+    text-align: center;
+    border-bottom: 2px solid black;
+    border: 1px solid black;
+}
+
+th,td{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+tr:nth-child(odd){
+    background-color: rgba(245, 146, 235, 0.701);
+}
+table input{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100px;
+    
+    
+}
+
+    </style>
+    <h2 id="heading"><i><u>Grade Calculator</u></i></h2><a id="back" href="taskHomePage.html">Back to Home</a><br>
+    <table >
+       <tr>
+        <th>Roll Number</th>
+        <th>Name</th>
+        <th>Mark</th>
+        <th>Grade</th>
+       </tr>
+       <tr>
+        <td>01</td>
+        <td>Barath</td>
+        <td><input type="text" name="getMark" id="getMark" onkeyup="getMarks()"/></td>
+        <td><input type="text" id="gradeResult"></td>
+       </tr>
+       <tr>
+        <td>02</td>
+        <td>Priya</td>
+        <td><input type="text" name="getMark2" id="getMark2" onkeyup="getMarks2()"/></td>
+        <td><input type="text" id="gradeResult2"></td>
+       </tr>
+       <tr>
+        <td>03</td>
+        <td>Varunika</td>
+        <td><input type="text" name="getMark3" id="getMark3" onkeyup="getMarks3()"/></td>
+        <td><input type="text" id="gradeResult3"></td>
+       </tr>
+       <tr>
+        <td>04</td>
+        <td>Vikranth</td>
+        <td><input type="text" name="getMark4" id="getMark4" onkeyup="getMarks4()"/></td>
+        <td><input type="text" id="gradeResult4"></td>
+       </tr>
+       <tr>
+        <td>05</td>
+        <td>Yashu</td>
+        <td><input type="text" name="getMark5" id="getMark5" onkeyup="getMarks5()"/></td>
+        <td><input type="text" id="gradeResult5"></td>
+       </tr>
+      
+    </table><br><br><br>
+    
+    <script>
+        function getMarks(){
+            let getMarks = document.getElementById('getMark').value;
+            let gradeResult = "";
+            if(getMarks>=90){
+                gradeResult="A";
+                }else if(getMarks>=80)
+                {
+                    gradeResult = "B";
+                }
+                else if(getMarks>=70)
+                {
+                    gradeResultult = "C";
+                }
+                else if(getMarks>=60)
+                {
+                    gradeResult = "D";
+                }
+                else if(getMarks>=50)
+                {
+                    gradeResult = "E";
+                }
+                else{
+                gradeResult = "F";
+            }
+            document.getElementById('gradeResult').value = gradeResult;
+        }
+            function getMarks2()
+            {
+            let getMarks2 = document.getElementById('getMark2').value;
+            let gradeResult2 = "";
+            if(getMarks2>=90){
+                gradeResult2="A";
+                }else if(getMarks2>=80)
+                {
+                    gradeResult2 = "B";
+                }
+                else if(getMarks2>=70)
+                {
+                    gradeResult2 = "C";
+                }
+                else if(getMarks2>=60)
+                {
+                    gradeResult2 = "D";
+                }
+                else if(getMarks2>=50)
+                {
+                    gradeResult2 = "E";
+                }
+                else{
+                    gradeResult2 = "F";
+            }   
+
+           
+            document.getElementById('gradeResult2').value = gradeResult2;
+        }
+        function getMarks3()
+            {
+            let getMarks3 = document.getElementById('getMark3').value;
+            let gradeResult3 = "";
+            if(getMarks3>=90){
+                gradeResult3="A";
+                }else if(getMarks3>=80)
+                {
+                    gradeResult3 = "B";
+                }
+                else if(getMarks3>=70)
+                {
+                    gradeResult3 = "C";
+                }
+                else if(getMarks3>=60)
+                {
+                    gradeResult3 = "D";
+                }
+                else if(getMarks3>=50)
+                {
+                    gradeResult3 = "E";
+                }
+                else{
+                    gradeResult3 = "F";
+            }   
+
+           
+            document.getElementById('gradeResult3').value = gradeResult3;
+        }
+        function getMarks4()
+            {
+            let getMarks4 = document.getElementById('getMark4').value;
+            let gradeResult4 = "";
+            if(getMarks4>=90){
+                gradeResult4="A";
+                }else if(getMarks4>=80)
+                {
+                    gradeResult4 = "B";
+                }
+                else if(getMarks4>=70)
+                {
+                    gradeResult4 = "C";
+                }
+                else if(getMarks4>=60)
+                {
+                    gradeResult4 = "D";
+                }
+                else if(getMarks4>=50)
+                {
+                    gradeResult4 = "E";
+                }
+                else{
+                    gradeResult4 = "F";
+            }   
+
+           
+            document.getElementById('gradeResult4').value = gradeResult4;
+        }
+        function getMarks5()
+            {
+            let getMarks5 = document.getElementById('getMark5').value;
+            let gradeResult5 = "";
+            if(getMarks5>=90){
+                gradeResult5="A";
+                }else if(getMarks5>=80)
+                {
+                    gradeResult5 = "B";
+                }
+                else if(getMarks5>=70)
+                {96
+                    gradeResult5 = "C";
+                }
+                else if(getMarks5>=60)
+                {
+                    gradeResult5 = "D";
+                }
+                else if(getMarks5>=50)
+                {
+                    gradeResult5 = "E";
+                }
+                else{
+                    gradeResult5 = "F";
+            }   
+
+           
+            document.getElementById('gradeResult5').value = gradeResult5;
+        }
+    </script>
+
+</body>
+</html>

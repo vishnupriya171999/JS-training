@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h2>Array</h2>
+        <script>
+            let parkingBays = [];
+
+            function parkVechile(vechileNo){
+                let parkedLength = parkingBays.length;
+                parkingBays[parkedLength] = vechileNo;
+                 console.log(parkingBays);
+            }
+            function getParkedVechileByNum(parkedBay){
+                console.log(parkingBays[parkedBay]);
+            }
+
+            function getParkedVechileByVechileNum(vechileNum){
+                let isFound= false;
+                for(let idx=0; idx<=parkingBays.length; idx++){
+                    if(parkingBays[idx] == vechileNum){
+                        console.log("Available");
+                        isFound =true;
+                        break;
+                    }
+                }
+                if(!isFound){
+                    console.log("Not Available");
+                }
+            }
+            parkVechile("TN10Y5286");
+            parkVechile("TN108596");
+            parkVechile("TN10Y1478");                
+            parkVechile("TN10G2586");
+
+            getParkedVechileByNum(1);
+            getParkedVechileByVechileNum("TN10Y5286");
+        </script>
+     </div>
+    <script>
+        let arr=["saravanan","priya","yukesh","prakash"]
+        for(i=0; i<=((arr.length)-1); i++){
+            console.log(arr[i]);
+        }
+            arr[2]="anandh"
+        console.log(arr);
+    </script>
+
+</body>
+</html>

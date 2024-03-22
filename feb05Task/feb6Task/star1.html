@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Star Left</h3><br>
+    Enter Number : <input type="text" id="num" name="num">
+    <button onclick="star1()">Get Stars</button> 
+    <div  style="color: rgb(254, 1, 1); font-size: 30px;margin-left: 100px; height: 120px;" id="output1"></div><br><br>
+   
+    <h3>Star Top to Bottom</h3>
+    Enter Number : <input type="text" id="num1" name="num1">
+    <button onclick="star2()">Get Stars</button><br><br>
+    <div  style="color: rgb(18, 5, 255); font-size: 30px;margin-left: 100px;height: 120px;" id="output2"></div>
+
+    <h3>Star Bottom to Top</h3>
+    Enter Number : <input type="text" id="num2" name="num2">
+    <button onclick="star3()">Get Stars</button><br><br>
+    <div  style="color: rgb(255, 5, 122); font-size: 30px;margin-left: 100px; height: 120px;" id="output3"></div>
+
+    <h3>Star Bottom to Top</h3>
+    Enter Number : <input type="text" id="num3" name="num3">
+    <button onclick="star4()">Get Stars</button><br><br>
+    <div  style="color: rgb(255, 5, 122); font-size: 30px;margin-left: 100px; height: 120px;" id="output4"></div>
+    
+    <script>
+        function star1(){
+            let num1 = Number(document.getElementById("num").value);
+            let result = "";
+            for (let i = 1; i <= num1; i++) {
+            // for (let j = 1; j <= i; j++) {
+            //     result += "*" ;
+            // }
+               result += "*";
+               result += "<br>";
+
+            }
+        document.getElementById("output1").innerHTML=result;
+        }
+
+        function star2(){
+            let num2 = Number(document.getElementById("num1").value);
+            let result1 = "";
+            for (let i = 1; i <= num2; i++) 
+            {
+            for (let j = 1; j <= num2 -i; j++)
+            {
+                result1 += "&nbsp;&nbsp"; 
+            }
+            for(let k = 0; k < 2 * i - 1; k++) 
+            {
+                result1 += "*";
+            }
+                result1 += "<br/>";
+            }
+            document.getElementById("output2").innerHTML=result1;
+        }
+
+        function star3(){
+            let num3 = Number(document.getElementById("num2").value);
+            let result2 = "";
+            for (let i = 0; i <= num3; i++) 
+            {
+            for (let j = 0; j <=i; j++)
+            {
+                result2 += "&nbsp;&nbsp";
+            }
+            for(let k = 0; k < 2 * (num3-i) - 1; k++) 
+            {
+                result2 += "*";
+            }
+                result2 += "<br/>";
+            }
+            document.getElementById("output3").innerHTML=result2;
+        }
+
+        function star4(){
+            let num4 = Number(document.getElementById("num3").value);
+            let result3 = "";
+            for (let i = 1; i <= num4; i++) 
+            {
+            for (let j = 1; j <= num4 -i; j++)
+            {
+                result3 += "&nbsp;&nbsp"; 
+            }
+            for(let k = 0; k < 2 * i - 1; k++) 
+            {
+                result3 += "*";
+            }
+                result3 += "<br/>";
+            }
+            for (let i = 1; i <= num4; i++) 
+            {
+            for (let j = 1; j <=i; j++)
+            {
+                result3 += "&nbsp;&nbsp";
+            }
+            for(let k = 0; k < 2 * (num4-i) - 1; k++) 
+            {
+                result3 += "*";
+            }
+            result3 += "<br/>";
+            }
+            document.getElementById("output4").innerHTML=result3;
+        }
+    </script>
+
+</body>
+</html>

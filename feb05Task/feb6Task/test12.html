@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>HI pattern</h2><br>
+    <!-- Give Number : <input type="text" id="num" name="num"> <button onclick="getStar()">Click</button><br> -->
+    <div id="output" style="color: blue; padding: 10px; font-size: 25px;" ></div>
+    <div id="output1" style="color: blue; padding: 10px; font-size: 25px;" ></div>
+    <div id="output2" style="color: rgb(244, 6, 6); padding: 10px; font-size: 25px; margin-top: -250px; margin-left: 150px;" ></div>
+    <div id="output3" style="color: rgb(3, 20, 3); padding: 10px; font-size: 25px;" ></div>
+
+    <script>
+        // function getStar(){
+            // let num1 = Number(document.getElementById("num").value);
+            let result = "";
+          
+            for (let row = 1; row <= 10; row++) {
+                for (let col = 1; col <= 10; col++) {
+                    // row==1||row==3||row==5||row==2&&col==1||col==5&&row==6
+                   if(row==1&&col==1||row==2&&col==3 ||row==3&&col==5||row==4&&col==7||row==1&&col==10||row==2&&col==9||row==3&&col==7||row==4&&col==7){
+                      result+="**";
+                   }else{
+                    result+="&nbsp;";
+                   } 
+                }
+                result+="<br>";
+            
+            } 
+            
+            document.getElementById("output").innerHTML=result;
+
+            let result1 = "";
+          
+          for (let row = 1; row <= 8; row++) {
+              for (let col = 1; col <= 6; col++) {
+                  // row==1||row==3||row==5||row==2&&col==1||col==5&&row==6
+                 if((row==3 && col<5) || (row==6&&col>2)){
+                    result1+="&nbsp&nbsp&nbsp";
+                 }else{
+                  result1+="*  ";
+                 } 
+              }
+              result1+="<br>";
+          
+          } 
+          
+          document.getElementById("output1").innerHTML=result1;
+
+          let result2 = "";
+          
+          for (let i = 1; i <= 8; i++) {
+              for (let j = 1; j <= 6; j++) {
+                // i>2&&i<7)&&(j>2&&j<5) || (i==1||i==8)&&j>4||(i==2||i==7)&&j==6
+                 if((i>2&&i<7)&&(j>2&&j<5) || (i==1||i==8)&&j>4||(i==2||i==7)&&j==6){
+                    result2+="&nbsp&nbsp&nbsp";
+                 }else{
+                  result2+="*  ";
+                 } 
+              }
+              result2+="<br>";
+          
+          } 
+          
+          document.getElementById("output2").innerHTML=result2;
+          let result3 = "";
+          
+          for (let row = 1; row <= 8; row++) {
+              for (let col = 1; col <= 7; col++) {
+                
+                 if((row==3 && col>2) || (row==6&&col<6) ||(row==1&&col==1||row==8&&col==7||col==7&&row==1) ||(row==8&&col==1)){
+                    result3+="&nbsp&nbsp&nbsp";
+                 }else{
+                  result3+="*  ";
+                 } 
+              }
+              result3+="<br>";
+          
+          } 
+          
+          document.getElementById("output3").innerHTML=result3;
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Array functions</h2>
+    <p id="results"></p>
+    <script>
+    //     function arrMethods(){
+    //         let result="";
+    //         let nameList = ["Priya", "Barath","Balaji","Lekha","Savitha","Saravana" ,"sowmiya", "divin"]
+    //         result += " Array : " + nameList + "<br>";
+    //         result += " Push keerthi: " + nameList.push("keerthi") + "<br>";
+    //         result += " Array : " + nameList + "<br>";
+    //         result += " pop lekha: " + nameList.pop("lekha") + "<br>";
+    //         result += " Array : " + nameList + "<br>";
+    //         result += " push sowmiya: " + nameList.push("sowmiya") + "<br>";
+    //         result += " Array : " + nameList + "<br>";
+    //         result += " pop divin: " + nameList.pop("divin") + "<br>";
+    //         result += " Array : " + nameList + "<br>";
+            
+            
+    
+            
+    //         document.getElementById('results').innerHTML=result;
+    //     }
+       
+
+    /******************* Push***********************/
+
+        // function pushfunction(arr,ele){  
+          
+        //     let len = arr.length
+        //     arr[len]=ele
+        //     console.log(arr)
+         
+        // }
+        // pushfunction([1,2,3],4)
+ 
+        //  /******************* Pop ***********************/
+         
+        //      function popfunction(arr){
+        //             let newarr=[];
+        //   let length = arr.length-1
+        
+        //   for( let i=0;i<length;i++)
+        //    {
+        //          newarr[i] = arr[i]
+        //        }
+        //     console.log(newarr)
+        //   }
+        //    popfunction([1,2,3,4,5,6])
+
+
+        
+        /******************* indexof ***********************/
+
+
+
+    //   function indexfunction(arr,char){
+      
+    //       for( let i=0;i<arr.length;i++)
+    //       {
+    //        if(char==arr[i]){
+           
+    //         console.log(i)
+    //         break;
+    //        }
+    //       }
+       
+    //   }
+    //   indexfunction([1,2,3],3)
+
+
+    /******************* lastindexof ***********************/
+    
+    
+
+    //   function lastindexfunction(arr,char){
+       
+    //       for( let i=arr.length;i>0;i--)
+    //       {
+    //        if(char==arr[i]){
+           
+    //         console.log(i)
+    //         break;
+    //        }0
+    //       }
+       
+    //   }
+    //   lastindexfunction([1,2,3,4,6,4,5],4)
+
+
+ /******************* include ***********************/
+
+
+//      function includefunction(arr,char){
+       
+//        let result=false;
+//         for( let i=0;i<arr.length;i++)
+//           {
+//         if(char==arr[i])  {
+//             result=true;
+//         }
+     
+
+//     }
+//     console.log(result)
+// }
+        
+//    includefunction([1,2,3,4,6,5],2)
+
+
+
+ /******************* reverse ***********************/
+      
+        function reverse(arr)
+        {
+          let newarr=[];
+          let i1=0;
+           for(let i=arr.length-1;i>=0;i--)
+           {
+             newarr[i1]=arr[i];
+             i1++
+            }
+            console.log(newarr)
+            document.getElementById("results").innerHTML=newarr;
+        }
+            reverse([1,2,3,4,5,6,7,8,9,10])
+
+
+        /******************* sort ***********************/
+
+
+    //  function arraysort(arr){
+    //          // let result="";
+    //          let temp=0;
+    //          for(let i=0;i<arr.length;i++){
+    //              for(let j=i+1;j<arr.length;j++){
+    //                  if(arr[i]>arr[j]){
+    //                     //  console.log(i);
+    //                     //  console.log(j);
+    //                 temp=arr[i];
+    //                 arr[i]=arr[j];
+    //                 arr[j]=temp;
+    //                 console.log(arr);
+                    
+    //                  }
+    //             }    
+    //          }
+           8            
+    //          document.getElementById('results').innerHTML=arr;
+    //      }
+    //      arraysort([5,2,8,1,6,3]);
+    //     //  arraysort([12,50,45,65,55,23,10,5,30,22,12,56,11,7,5,1,1]);
+
+
+
+     /******************* shift ***********************/
+
+
+    // function shift(arr){
+    //     let newarr =[];
+    //     let i1 = 0;
+    //     for(let i=1;i<arr.length;i++){
+    //         newarr[i1]=arr[i];
+    //         i1++;
+    //     } 
+    //     console.log(newarr);
+
+    // }
+    // shift([1,2,3,4,5,6,7]);
+
+
+ /******************* unshift ***********************/
+
+
+    function unshift(arr,ele){
+        let newarr =[];
+        let i1 = 1;
+        newarr[0]=ele;
+        for(let i=0;i<arr.length;i++){
+            newarr[i1]=arr[i];
+            i1++;
+        } 
+        console.log(newarr);
+    }
+    unshift([1,2,3,4,5,6,7],5);
+
+    /******************* toString ***********************/
+
+
+    function toString(arr){
+        let result="";
+        for(let i=0;i<arr.length;i++){
+            if(i==arr.length-1){
+                result+=arr[i];
+            }else{
+                result+=arr[i] + ","
+            }
+        }
+        console.log(result)
+
+    }
+    toString([1,2,3,4,5,6])
+
+     /******************* join ***********************/
+
+
+     function join(arr){
+        let result="";
+        for(let i=0;i<arr.length;i++){
+            if(i==arr.length-1){
+                result+=arr[i];
+            }else{
+                result+=arr[i] + "*"
+            }
+        }
+        console.log(result)
+
+    }
+    join([1,2,3,4,5,6])
+
+     /******************* cancat ***********************/
+
+     function cancat(arr1,arr2){
+        let newarr=[];
+        for(i=0;i<arr1.length;i++){
+            newarr[i]=arr1[i];
+        }
+        let len = newarr.length;
+        for(j=0;j<arr2.length;j++){
+            newarr[len]=arr2[j];
+            len++;
+        }
+        console.log(newarr)
+     }
+     cancat([1,2,3],[4,5,6])
+
+
+    //  /******************* fill ***********************/
+        function fill(arr){
+            let newarr=[]
+            for(i=0;i<arr.length;i++){
+                if(i>=2&&i<=5){
+                    newarr[i]= " * ";
+                }else{
+                    newarr[i]=arr[i];
+                }
+            }
+            console.log(newarr)
+        }
+        fill([1,2,3,4,5,6,7,8,9,10])
+
+
+
+        // function result(arr){
+        //     newarr=[];
+        //     i1=0;
+        //     for(i=arr.length-1;i>=0;i--){
+        //      newarr[i1]=arr[i];
+        //      i1++;
+        //     }
+        //     console.log(newarr)
+        // }
+        // result([1,2,3,4,5])
+
+     
+        
+
+      
+    </script>
+
+</body>
+</html>

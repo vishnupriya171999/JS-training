@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Bill</title>
+</head>
+<body>
+    <h2><b>Discount Bill</b></h2>
+   <form action="#">
+    <div class="input">
+        <label> Enter bill Amount : </label>
+        <input type="text" id="amount">
+    </div><br>
+
+    <div class="input">
+        <label>Discount amount   : </label>
+        <input type="text" id="discountAmount">
+    </div><br>
+    <div class="input">
+        <label> Final Bill : </label>
+        <input type="text" id="finalBill"  >
+    </div><br>
+    <button type="submit" onclick="calc()"  >Calculate</button>
+    <input type="reset" value="reset" >
+    
+   </form>
+
+   <script>
+        function calc(){
+            let bill = document.getElementById("amount").value;
+            let dis = bill / 10;
+            let final = bill - dis;
+            
+            document.getElementById('discountAmount').value=dis;
+            document.getElementById('finalBill').value=final;
+       }
+   </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Fibonacci Series</h2> 
+    <div>
+        Number 1 : <input type="text" id="num1" name="num1"><br><br>
+       
+        <button type="button" onclick="fabi()">Get</button><br><br>
+        Result: <p id="res"></p>
+       
+    </div>
+    <script>
+        function fabi(){
+            let num1 = Number(document.getElementById("num1").value);
+            let n1 = 0;
+            let n2 = 1;
+            let next;
+            let result = "";
+            for( i=0;i<=num1;i++){
+               result+=n1;
+                next = n1+n2;
+                n1=n2;
+                n2=next;          
+            }
+         
+      document.getElementById("res").innerHTML=result;
+        }
+    </script>
+</body>
+</html>

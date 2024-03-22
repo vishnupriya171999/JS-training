@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Odd Even</h2> 
+    <div>
+        Number 1 : <input type="text" id="num1" name="num1"><br><br>
+        Number 2 : <input type="text" id="num2" name="num2"><br><br>
+        <button type="button" onclick="oddEven()">Get</button><br><br>
+        Result: <p id="res"></p>
+       
+    </div>
+    <script>
+        function oddEven(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let result="";
+            for( i=num1;i<=num2;i++){
+              if((i%2)==0){
+                  result+=i+"  is Even <br>";
+
+              }else{
+                result+=i+"  is Odd <br>";
+              }
+            }
+            document.getElementById("res").innerHTML=result;
+          
+        }
+    </script>
+</body>
+</html>

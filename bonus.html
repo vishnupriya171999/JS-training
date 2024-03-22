@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Bonus</h2><br><br>
+    Salary : <input type="text" id="sal"><br><br>
+    Experience : <input type="text" id="exp"><br><br>
+    Bonus : <input type="text" id="bonus"> <br><br>
+    <input type="button" value="Calculate" onclick="billValue()">  Final Salary : <input type="text" id="finalSalary">
+   
+   <script>
+      function billValue(){
+        let salary = document.getElementById("sal").value;
+        let experience = document.getElementById("exp").value;
+        if(salary<30000 && experience>=3){
+            document.getElementById("bonus").value="5%";
+            document.getElementById("finalSalary").value= (Number(salary) + (Number(salary)*0.05)) ;
+        
+        }else{
+            document.getElementById("bonus").value="0%";
+            document.getElementById("finalSalary").value= salary;
+        }
+       
+      }
+
+   </script>
+
+</body>
+</html>

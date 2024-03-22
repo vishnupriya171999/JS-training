@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>2. Apply a discount of 5% if the bill amount is above 1000 of 10% if the bill amount is above 2000 Rs.
+    </h2>
+    Bill : <input type="text" id="amt"><br><br>
+    Discount : <input type="text" id="dis"><br><br>
+    <input type="button" value="Calculate" onclick="output()">  <input type="text" id="value">
+
+<br><br><br>
+<h2>5. Allow the student if the attandence is greater than 75%. i/p : Total no of classes held, total no of calsses attended. </h2><br><br>
+
+Total No Of Classes held : <input type="text" id="noOfClassesHeld"><br><br>
+Total No Of Classes Attended : <input type="text" id="noOfClassesAttended"><br><br>
+Percentage : <input type="text" id="per"><br><br>
+<input type="button" value="Result" onclick="evaluate()"/><br>
+<p id="resulted"></p>
+
+
+    <script>
+        function evaluate(){
+            let heldClass = Number(document.getElementById("noOfClassesHeld").value);
+            let attendedClass =Number(document.getElementById("noOfClassesAttended").value);
+            let per =(attendedClass/heldClass)*100;
+           
+            if(per>=75){
+                
+                document.getElementById("resulted").innerHTML=" Allow the student";
+            }else{
+                document.getElementById("resulted").innerHTML=" Don't allow the student";
+                document.getElementById("per").value=per + "%";
+                
+
+            }
+    }
+        function output(){
+            let amount = document.getElementById("amt").value;
+            if(amount>1000 && amount<=2000){
+                document.getElementById("dis").value="5%";
+            document.getElementById("value").value=(amount-(amount*0.05));
+            }else if(amount>200){
+                document.getElementById("dis").value="10%";
+            document.getElementById("value").value=(amount-(amount*0.1));
+            }else{
+                document.getElementById("dis").value="0%";
+            document.getElementById("value").value= amount;
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calc</title>
+</head>
+<body>
+    <div>
+        <h2>Simple Calc</h2>
+    </div>
+    <script>
+
+        var calcMem = 0;
+        var mul=100000;
+        //WPWOR
+        function add(val1, val2){
+            let result = val1 + val2;
+            calcMem = result;
+            console.log(result);
+        }
+        //WPWR
+        function sub(val1, val2){
+           
+            let result = val1 - val2;
+            return result;
+        }
+        //WOPWOR
+        function displayCalcMem(){
+            console.log(calcMem);
+        }
+        //WOPWR
+        function sendOTP(){
+            return 12354;
+        }
+        function helloFunction(){
+            console.log(mul);
+        }
+    
+        
+
+        add(10,50);
+        console.log(sub(50,10));
+        displayCalcMem();
+        calcMem = sendOTP();
+        helloFunction();
+        displayCalcMem();
+        add(sendOTP(), 10);
+        // console.log(calcMem);
+
+
+        function findAverage(sumVal, count){
+            console.log(sumVal/count);
+        }
+
+        function findSum(mark1, mark2, mark3){
+            return mark1 + mark2 + mark3;
+        }
+
+        function findAverage2(mark1, mark2, mark3, count){
+            let sumVal = findSum(mark1, mark2, mark3);
+            let result = sumVal/count;
+            console.log(result);
+        }
+
+        findAverage(30,3);
+        findAverage2(40,50,60,3);
+        
+    </script>
+</body>
+</html>

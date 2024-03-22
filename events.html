@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Topics </title>
+</head>
+<!--onload="displayForm()"-->
+<body >
+    <div>
+        <h2>Js Topics</h2>
+        <div>
+            <h3>Events and Document</h3>
+            <form>
+                <!--onkeyup="displayForm()""-->
+                Name : <input type="text" name="fullName" id="fullName" /><br>
+                Age : <input type="number" name="age" id="age"/><br>
+                country: <select>
+                    <option> Select</option>
+                    <option> A</option>
+                    <option> B</option>
+                    <option> C</option>
+                    <option> D</option>
+
+                </select>
+                <!--onchange="displayForm()"-->
+                State: <select >
+                        <option>--Select--</option>
+                        <option>TN</option>
+                        <option>KL</option>
+                        <option>AP</option>
+                </select><br>
+                Gender: <input type="radio" name="gender" id="male"/>Male
+                <input type="radio" name="gender" id="female"/>Female
+                <input type="radio" name="gender" id="others"/>Others
+                <input type="button" value="Submit" onClick="displayForm()"/>
+            </form>
+            <br>
+            <!--onmouseout="displayForm()"-->
+            <!-- <img src="./assets/images/cat1.jpeg" /> -->
+            <p id="msg">Not Submitted</p>
+            <input type="text" id="txtMsg" name="txtMsg"/>
+            <script>
+                function displayForm(){
+                    console.log("Clicked Me...");
+                    let fullName = document.getElementById('fullName').value;
+                    let age = document.getElementById('age').value;
+                    console.log(fullName, age);
+                    console.log(document);
+                    console.log(document.getElementsByName('gender'));
+                    console.log(document.getElementsByTagName('input'));
+                    document.getElementById('msg').innerHTML = "FormSubmitted";
+                    document.getElementById('txtMsg').value = "FormSubmitted";
+                }
+            </script>
+        </div>
+    </div>
+    <div>
+            <h2>Conditions</h2>
+            <h3>Age Type</h3>
+            Age : <input type="text" name="ageCalc" id="ageCalc" onkeyup="calculateAge()"/>
+            <button type="button" onclick="calculateAge()">Show Age Category</button>
+            <p id="ageResult"></p>
+            <script>
+                function calculateAge(){
+                    let age = Number(document.getElementById('ageCalc').value);
+                    let ageResult = "";
+                    if(age > 18){
+                        if(age > 60){
+                            ageResult="Senior Citizen";
+                        }else{
+                            ageResult = "Major";
+                        }
+                    }else if(age > 10){
+                        ageResult = "Minor";
+                    }else if(age > 5){
+                        ageResult = "Kid";
+                    }else{
+                        ageResult = "Baby";
+                    }
+
+                    document.getElementById('ageResult').innerHTML = ageResult;
+                }
+            </script>
+            <!--
+                Operators
+                + - * / %
+                > < >= <= == != === 
+                || && !
+            -->
+            <h3>Simple Calculator</h3>
+            Number 1 : <input type="text" name="num1" id="num1"/><br>
+            Number 2 : <input type="text" name="num2" id="num2"/><br>
+            Operation: <select id="calcOp">
+                            <option>Add</option>
+                            <option>Sub</option>
+                            <option>Mul</option>
+                            <option>Div</option>
+                        </select><br>
+            <button type="button" onclick="calcNum()">Calculate</button><br>
+            Result : <input type="text" name="calcResult" id="calcResult"/>
+
+            <script>
+                function calcNum(){
+                    let number1 = Number(document.getElementById('num1').value);
+                    let number2 = Number(document.getElementById('num2').value);
+                    let calcOperator = document.getElementById('calcOp').value;
+                    let calcResult = "";
+                    if(calcOperator == "Add"){
+                        calcResult = number1 + number2;
+                    }else if(calcOperator == "Sub"){
+                        calcResult = number1 - number2;
+                    }else if(calcOperator == "Mul"){
+                        calcResult = number1 * number2;
+                    }else if(calcOperator == "Div"){
+                        calcResult = number1 / number2;
+                    }
+                    document.getElementById('calcResult').value = calcResult;
+                }
+            </script>
+        </div>
+</body>
+</html>

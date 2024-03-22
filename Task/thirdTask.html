@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest of Three Numbers</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #heading{
+
+text-align: center;
+font-size: 35px;
+
+}
+body{
+            background-color: rgb(250, 201, 239);
+        }
+        #back{
+            text-decoration: none;
+            position: relative;
+            top: -35px;
+            left: 300px;
+            background-color: rgba(254, 12, 153, 0.753);
+            padding: 10px;
+            /* font-size: 16px; */
+            border:3px solid black;
+            border-radius: 20px;
+            color: whitesmoke;
+            
+       }
+       #back:hover{
+            color:black ;
+       }
+       .edit{
+        font-size: 20px;
+       }
+       .edit input{
+        font-size: 20px;
+        text-align: left;
+        border: none;
+        border-radius: 5px;padding: 5px;
+        outline: none;
+        
+       }
+    </style>
+    <h2>Greatest of Three Numbers</h2> <a id="back" href="taskHomePage.html">Back to Home</a><br>
+    <div class="edit">
+    Number 1 : <input type="text" id="num1" required /><br><br>
+    Number 2 : <input type="text" id="num2" required /><br><br>
+    Number 3 : <input type="text" id="num3" required/><br><br>
+    <input type="button" onclick="greater()" value="Get Answer" required/>
+    <input type="text" id="result"  required/><br><br><br>
+</div>
+
+
+    <script>
+       
+        function greater(){
+            let n1 = Number (document.getElementById("num1").value);
+            let n2 = Number (document.getElementById("num2").value);
+            let n3 = Number (document.getElementById("num3").value);
+            let result = "";
+            if (n1 > n2 & n1 > n3)
+            {
+                result = n1 + " is the greatest number";
+            }
+            else if(n2 > n1 & n2 > n3)
+            {
+                result = n2 + " is the greatest number";
+            }
+            else if(n3 > n1 & n3 > n1)
+            {
+                result = n3 + " is the greatest number";
+            }
+
+            document.getElementById('result').value = result;
+
+        }
+
+    </script>
+</body>
+</html>

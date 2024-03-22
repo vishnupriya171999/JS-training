@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test2</title>
+</head>
+<body>
+    <h2> Test 2</h2>
+    <input type="text" id="fanscreen" placeholder="Fan" ><input type="text" id="tvscreen" placeholder="TV" >
+    <input type="text" id="lightscreen" placeholder="Light" ><input type="text" id="doorscreen" placeholder="Door" >
+    <button id="fan" onclick="fanswitch()">Fan</button>
+   <button id="tv" onclick="tvswitch()" >Tv</button>
+  <button id="light" onclick="lightswitch()" >Light</button>
+    <button id="door" onclick="doorswitch()" >Door</button><br><br>
+    <script>
+  function fanswitch(){
+    document.getElementById("fanscreen").value="ON";
+    
+  }
+  function tvswitch(){
+    document.getElementById("tvscreen").value= "ON";
+    
+  }
+  function lightswitch(){
+    document.getElementById("lightscreen").value= "ON";
+    
+  }
+  function doorswitch(){
+    document.getElementById("doorscreen").value="ON";
+    
+  }
+    </script>
+  
+   
+
+ 
+</body>
+</html>

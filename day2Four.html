@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>4. Find the given 3 digit num s palindroms or not.</h2>
+Enter a Number : <input type="text" id="num"><br><br>
+<button type="button" onclick="findPalindrom()">Check</button>
+Result : <input type="text" id="Palin"><br><br>
+
+<script>
+     function findPalindrom(){
+    let num = Number(document.getElementById("num").value);
+    let reverseNumber = 0;
+    let rem;
+    let Palin="";
+    let OriginalNum=num;
+    
+    while(num>0)
+    {
+        rem =num%10;
+        reverseNumber = reverseNumber*10+rem;
+        num=Math.floor(num/10);
+    }
+  if(OriginalNum===reverseNumber){
+    Palin = "Palindrome";
+    document.getElementById("Palin").value =Palin;
+
+  }else
+  {
+    Palin = " Not a Palindrome";
+    document.getElementById("Palin").value =Palin;
+  }
+ 
+
+
+    }
+</script>
+</body>
+</html>

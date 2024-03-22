@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Switch System
+
+        <div class="switchSys" id="fanSys">Fan</div>
+        <div class="switchSys" id="tvSys">TV</div>
+        <div class="switchSys" id="lightSys">Light</div>
+        <div class="switchSys" id="doorSys">Door</div>
+        <button type="button" onclick="switchSystem('fan')">Fan</button><button type="button" onclick="switchSystem('light')">Light</button>
+        <button type="button" onclick="switchSystem('tv')">TV</button><button type="button" onclick="switchSystem('door')">Door</button>
+        <script>
+            function switchSystem(item){
+               /* if(item == "fan"){
+                    changeItem('fanSys', "FAN");
+                }else if(item == "tv")
+                    changeItem('tvSys', "TV");
+                else if(item == "light")
+                    changeItem('lightSys', "Light");
+                else if(item == "door")
+                    changeItem('doorSys', "Door");*/
+
+                switch(item){
+                    case "fan":
+                        changeItem('fanSys', "FAN");
+                        break;
+                    case "tv":
+                        changeItem('tvSys', "TV");
+                        break;
+                    case "light":
+                        changeItem('lightSys', "Light");
+                        break;
+                    case "door":
+                        changeItem('doorSys', "Door");
+                        break;
+                    default:
+                        console.log("Invalid Option");
+                }
+            }
+            function changeItem(eleId, itemName){
+                document.getElementById(eleId).innerHTML = itemName + " ON";
+                document.getElementById(eleId).style.backgroundColor = "green";
+            }
+        </script>
+        <style>
+            .switchSys{
+                width:100px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 4</title>
+</head>
+<body>
+    <h2>Create a Box Model</h2><br>
+    <div class="box">
+        <form>
+            <h3>Login Form</h3>
+            <div class="input">
+                <label for="username">Username :</label>
+                <input type="text" name="username" id="username" required>
+
+            </div><br>
+            <div class="input">
+                <label for="password">Password :</label>
+                <input type="text" name="password" id="password" required>
+            </div><br>
+            <div class="button">
+                <button>Submit</button>
+                <button>Cancel</button>
+            </div>
+           
+            
+        </form>
+    </div>
+    <style>
+        *{
+            
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+        h2{
+            font-size: 30px;
+            margin-left: 80px;
+            
+        }
+        body{
+            margin: 600px;
+            margin-top: 150px;
+            overflow: hidden;
+        }
+        
+        .box{
+            border: 2px solid rgb(7, 66, 243);
+            width: 500px;
+            /* height: 350px; */
+            text-align: center;
+            justify-content: center;
+            box-sizing: border-box;
+           margin: 5px;
+           background-color: rgba(23, 235, 250, 0.293);
+        }
+        h3{
+            font-size: 30px;
+            color: rgb(9, 9, 230);
+
+        }
+        .input{
+            color: blue;
+        }
+        .input label{
+            margin: 5px;
+            padding: 10px;
+
+        }
+        .input input{
+            margin: 10px;
+            border-radius: 5px;
+            border-style: none;
+           
+        }
+        .button{
+          margin-left:100px ;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+        .button  button{
+            padding: 5px;
+            margin: 10px;
+            border-radius: 10px;
+            color: blue;
+            border-color: whitesmoke;
+            
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Num : <input type="text" id="num" name="num"> <button onclick="findnutralize()">Get</button><br>
+  <div id="result"></div>
+<script>
+  function findnutralize(){
+    let num = Number(document.getElementById("num").value);
+    nutralize(num);
+  }
+
+  function nutralize(num){
+    result = 0;
+    while(num!=0){
+      result+=num%10;
+      num=math.floor(num/10);
+    }
+    if(result<10){
+      console.log(result);
+      document.getElementById("result").innerHTML=result;
+    }else{
+      nutralize(result);
+      document.getElementById("result").innerHTML=result;
+    }
+
+
+  }
+
+</script>
+  
+</body>
+</html>

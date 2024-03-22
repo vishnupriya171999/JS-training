@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set&Map</title>
+</head>
+<body>
+    <h2>Set Example</h2>
+
+    <script>
+       
+       let myset = new Set();
+       myset.add("priya")
+       myset.add("barath")
+       myset.add("ammu")
+       myset.add("karthick")
+       myset.add(5)
+       myset.add({'a':1,'b':2})
+       console.log(myset);
+       console.log(myset.has("ammu"))
+
+       let arr2 = Array.from(myset)
+       console.log(arr2)
+
+          
+    </script>
+    
+    <script>
+        let map = new Map();
+        map.set('a',1)
+        map.set('b',2)
+        map.set('c',3)
+        map.set('d',4)
+        map.set('b',5)
+        console.log(map)
+        for(let i of map){
+            console.log(i)
+        }
+        for(let [k,v] of map){
+            console.log(k)
+        }
+        for(let [k,v] of map){
+            console.log(v)
+        }
+        for(let k of map.keys()){
+            console.log(k)
+        }
+        for(let v of map.values()){
+            console.log(v)
+        }
+        map.forEach((v,k)=>{
+            console.log('key' , k , 'value' , v)
+        })
+        
+        ///////////////2d array to map
+        let kvarray =[['a',1],['b',1]]
+        let map2 = new Map(kvarray)
+        console.log(map2)
+
+    
+        // fetch('https://official-joke-api.appspot.com/jokes/programming/random')
+        // .then((res)=>res.json())
+        // .then((msg)=>console.log(msg[0].setup,msg[0].punchline))
+        // .catch((err)=>console.log(err))
+
+        console.log(fetch('https://api-thirukkural.vercel.app/api?num=25'))
+
+
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetMap</title>
+</head>
+
+<body>
+    <div>
+        <h2>Set & Map</h2>
+        <script>
+            
+
+            
+
+            let recipeMap = new Map([
+                ['cucumber', 500],
+                ['tomatoes', 350],
+                ['onion', 50]
+            ]);
+
+            // // iterate over keys (vegetables)
+            for (let vegetable of recipeMap.keys()) {
+                console.log(vegetable); // cucumber, tomatoes, onion
+            }
+
+            // // iterate over values (amounts)
+            for (let amount of recipeMap.values()) {
+                console.log(amount); // 500, 350, 50
+            }
+
+            // iterate over [key, value] entries
+            for (let entry of recipeMap) { // the same as of recipeMap.entries()
+                console.log(entry); // cucumber,500 (and so on)
+            }
+
+            let string ='{"name": "Priya","gender": "Female","age": 24,"ismarried": false,"marks": [10, 20, 30, 40, 50],"average": 74.0,"Hobbies": null,"address":{"street": "Main Road","City": "Chennai","Pincode": 600004}}';
+                let val = JSON.parse(string);
+                console.log(val);
+                console.log(" name   :  " + val.name);
+                console.log(" address   :  " + val.address.street);
+                console.log(" name   :  " + val.gender);
+                console.log(" age   :  " + val.age);
+                console.log(" marks   :  " + val.marks[0]);
+                console.log(" pincode   :  " + val.address.Pincode);
+
+                let array = 
+                [
+                    {"name":"Priya"},
+                    {"number":9685748596},
+                    {"address":{"Street":"Main Road","city":"Chennai","Pincode":605402}},
+                    {"marks":["Tamil","954"]}
+                ]
+
+
+        </script>
+    </div>
+</body>
+
+</html>

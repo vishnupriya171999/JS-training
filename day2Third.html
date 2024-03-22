@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>5. Allow the student if the attandence is greater than 75%. i/p : Total no of classes held, total no of calsses attended. </h2><br><br>
+
+Total No Of Classes held : <input type="number" id="noOfClassesHeld"/><br><br>
+Total No Of Classes Attended : <input type="number" id="noOfClassesAttended"/><br><br>
+Percentage : <input type="text" id="per"><br><br>
+<button type="button" id="res" onclick="attendance()">Result</button>
+<input type="text" id="resulted">
+
+<script>
+    function attendance(){
+            let heldClass = Number(document.getElementById("noOfClassesHeld").value);
+            let attendedClass =Number(document.getElementById("noOfClassesAttended").value);
+            let per =(attendedClass/heldClass)*100;
+           
+            if(per>=75){
+                document.getElementById("per").value= per + " %";
+                document.getElementById("resulted").value=" Allow the student";
+            }else{
+                document.getElementById("resulted").value=" Don't allow the student";
+                document.getElementById("per").value= per + " %";
+                
+
+            } }
+
+ function findReverse(){
+    let num = Number(document.getElementById("num").value);
+    let reverseNumber = 0;
+    let rem;
+    while(num>0)
+    {
+        rem =num%10;
+        reverseNumber = reverseNumber*10+rem;
+        num=Math.floor(num/10);
+    }
+    document.getElementById("reverse").value = reverseNumber;
+ 
+
+
+    }
+    function findPalindrom(){
+    let num = Number(document.getElementById("num").value);
+    let reverseNumber = 0;
+    let rem;
+    let Palin="";
+    let OriginalNum=num;
+    
+    while(num>0)
+    {
+        rem =num%10; //you get 1 
+        reverseNumber = reverseNumber*10+rem; 
+        num=Math.floor(num/10);
+    }
+  if(OriginalNum===reverseNumber){
+    Palin = "Palindrome";
+    document.getElementById("Palin").value =Palin;
+
+  }else
+  {
+    Palin = " Not a Palindrome";
+    document.getElementById("Palin").value =Palin;
+  }
+ 
+
+
+    }
+</script>
+
+<h2>3. Reverse the given 3 digit num.</h2><br><br>
+Enter a Number : <input type="text" id="num"><br><br>
+<button type="button" onclick="findReverse()">Reverse the Number</button>
+Reversed Number is : <input type="text" id="reverse"><br><br>
+
+
+<h2>4. Find the given 3 digit num s palindroms or not.</h2>
+Enter a Number : <input type="text" id="num"><br><br>
+<button type="button" onclick="findPalindrom()">Check</button>
+Result : <input type="text" id="Palin"><br><br>
+
+
+
+
+
+</body>
+</html>
